@@ -11,13 +11,9 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/pickify_logo1.png" type="image/x-icon" sizes="64x64">
 
     <title>Pickify</title>
-
-    <!-- slider stylesheet -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="{{asset ('css/bootstrap.css')}}" />
@@ -49,40 +45,32 @@
 
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}">
+                            Home <span class="sr-only">(current)</span>
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/shop')}}">
+                        <a class="nav-link {{ request()->is('shop*') ? 'active' : '' }}" href="{{ url('/shop') }}">
                             Shop
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/why_us')}}">
+                        <a class="nav-link {{ request()->is('why_us') ? 'active' : '' }}" href="{{ url('/why_us') }}">
                             Why Us
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/testimonial')}}">
+                        <a class="nav-link {{ request()->is('testimonial') ? 'active' : '' }}"
+                            href="{{ url('/testimonial') }}">
                             Testimonial
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{url('/contact_us')}}">Contact Us</a>
+                        <a class="nav-link {{ request()->is('contact_us') ? 'active' : '' }}"
+                            href="{{ url('/contact_us') }}">
+                            Contact Us
+                        </a>
                     </li>
-
-                    <li class="nav-item" id="mobile-search-bar">
-                        <div id="searchBar">
-                            <form action="{{ url('search_product') }}" method="GET" style="margin-bottom: -1px;">
-                                <input type="search" name="search" id= "searchInput" placeholder="Search your items"
-                                    value="{{ request('search') }}">
-                                <span id="clearBtn" class="clearBtn">&times;</span>
-                                <button id="btn" class="search_button" type="submit">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </li>
-
                 </ul>
 
             </div>
@@ -154,17 +142,17 @@
     </script>
 
     <script>
-    const searchInput = document.getElementById('searchInput');
-    const clearBtn = document.getElementById('clearBtn');
+        const searchInput = document.getElementById('searchInput');
+        const clearBtn = document.getElementById('clearBtn');
 
-    function toggleClearButton() {
+         function toggleClearButton() {
         clearBtn.style.display = searchInput.value ? 'inline-block' : 'none';
-    }
+        }
 
-    searchInput.addEventListener('input', toggleClearButton);
-    window.addEventListener('DOMContentLoaded', toggleClearButton);
+        searchInput.addEventListener('input', toggleClearButton);
+        window.addEventListener('DOMContentLoaded', toggleClearButton);
 
-    clearBtn.addEventListener('click', function () {
+        clearBtn.addEventListener('click', function () {
         searchInput.value = '';
         toggleClearButton();
         searchInput.focus();
