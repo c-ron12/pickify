@@ -2,7 +2,7 @@
 @section('main-container')
 
 <!-- shop section -->
-<section class="shop_section layout_padding">
+<section class="shop_section layout_padding" id="shop_parent_container">
     <div class="container">
         <div class="heading_container heading_center">
             <h2>
