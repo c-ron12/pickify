@@ -3,13 +3,13 @@
 
 <section class="contact_section layout_padding">
     <div class="container px-0">
-        <div class="heading_container ">
+        <div class="heading_container" style="padding-top: 80px;">
             <h2 class="">
                 Contact Us
             </h2>
         </div>
     </div>
-    <div class="container container-bg">
+    <div class="container container-bg" style="margin-bottom: 72px;">
         <div class="row">
             <div class="col-lg-7 col-md-6 px-0">
                 <div class="map_container">
