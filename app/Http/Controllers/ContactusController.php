@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Cart;
 use Auth;
+use App\Models\ContactUs;
 
 class ContactusController extends Controller
 {
@@ -18,7 +19,25 @@ class ContactusController extends Controller
         } else {
             $count = 0;
         }
-
         return view ('contact_us', compact('count'));
     }
+
+    public function store (Request $request) {
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:60',
+            'email' => 'required|email|max:60',
+            'phone' => 'required|string|max:15|regex:/^[\+\-0-9\s\(\)]{10,20}$/',
+            'message' => 'nullable|string|max:2000',
+        ]);
+
+       if (Auth::check()) {
+           $validatedData['user_id'] = Auth::id();
+       }
+
+       ContactUs::create($validatedData);
+
+       session()->flash('toastr', 'Message sent successfully.');
+       return redirect()->back();
+    }   
+
 }
