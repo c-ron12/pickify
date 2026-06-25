@@ -21,6 +21,7 @@ yarn-error.log
 /.nova
 /.vscode
 .history/
+/public/images/database_img/*
 
 chatter.log
 /storage/framework/cache/data/*
