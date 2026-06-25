@@ -20,4 +20,12 @@ yarn-error.log
 /.idea
 /.nova
 /.vscode
-/.zed
+.history/
+
+chatter.log
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+/.pnpm-store
