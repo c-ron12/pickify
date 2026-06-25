@@ -8,6 +8,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\WhyusController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ContactUsController;
+use App\Http\Controllers\FaqsController;
 
 // user view
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -29,6 +30,9 @@ Route::post('/order/{id}/cancel', [HomeController::class, 'cancel'])->name('orde
 
 Route::get('search_product', [HomeController::class, 'search_product'])->name('search.product');
 Route::get('remove_from_cart/{id}', [HomeController::class, 'remove_from_cart'])->middleware(['auth', 'verified']);
+Route::post('/submit_testimonial', [TestimonialController::class, 'store'])->middleware('auth');
+Route::post('/contact', [ContactUsController::class, 'store'])->name('contact.submit');
+Route::get('/faqs', [FaqsController::class, 'faqs']);
 
 
 
@@ -38,7 +42,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__.'/auth.php'; 
 
 // admin dashboard 
 Route::get('admin/dashboard',[HomeController::class, 'index'])->middleware(['auth', 'admin']);
