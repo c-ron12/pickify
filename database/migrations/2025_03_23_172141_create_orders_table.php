@@ -24,10 +24,11 @@ return new class extends Migration
             $table->string('status')->default('in process');
               
             
-            $table->unsignedBigInteger('user_id')->constrained('users');
-            $table->unsignedBigInteger('product_id')->constrained('products');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');  // user_id  is connected to the id in the users table
-            $table->foreign('product_id')->references('id')->on('products')->onUpdate('cascade'); // product_id is connected to the id in the products table
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('product_id');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade'); // same as above, but explicitly specifies table
+ // user_id  is connected to the id in the users table
+            $table->foreign('product_id')->constrained('products')->onDelete('update'); // product_id is connected to the id in the products table
 
             $table->timestamps();
         });
