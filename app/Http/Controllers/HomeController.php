@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\User;
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\Testimonial;
 
 use Auth;    // for Auth::user()->id
 
@@ -14,6 +15,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+        
         $user = User::where('usertype', 'user')->get()->count();
 
         $product = Product::all()->count();
@@ -26,6 +28,7 @@ class HomeController extends Controller
 
     public function home()
     {
+        $testimonials=Testimonial::all();
         $product = Product::take(8)->get();
         if (Auth::id()) {
             $user = Auth::user();  // gets logged in user
@@ -36,11 +39,12 @@ class HomeController extends Controller
             $count = 0;
         }
 
-        return view('home', compact('product', 'count'));
+        return view('home', compact('product', 'count', 'testimonials'));
     }
 
     public function login_home()
     {
+        $testimonials=Testimonial::all();
         $product = Product::all();
         if (Auth::id()) {
             $user = Auth::user(); // gets logged in user
@@ -50,7 +54,7 @@ class HomeController extends Controller
         } else {
             $count = 0;
         }
-        return view('home', compact('product', 'count'));
+        return view('home', compact('product', 'count', 'testimonials'));
     }
 
     public function product_details($id)
