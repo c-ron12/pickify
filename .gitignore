@@ -30,3 +30,17 @@ chatter.log
 /storage/framework/views/*
 /storage/logs/*
 /.pnpm-store
+
+# IDE Helpers
+_ide_helper.php
+_ide_helper_models.php
+.phpdoc-md
+.meta/
+
+# Tailwind / PostCSS (Only add if you decide to remove Tailwind from the project)
+# tailwind.config.js
+# postcss.config.js
+
+# OS generated files
+.DS_Store
+Thumbs.db
