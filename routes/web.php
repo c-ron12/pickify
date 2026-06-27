@@ -32,7 +32,7 @@ Route::get('search_product', [HomeController::class, 'search_product'])->name('s
 Route::get('remove_from_cart/{id}', [HomeController::class, 'remove_from_cart'])->middleware(['auth', 'verified']);
 Route::post('/submit_testimonial', [TestimonialController::class, 'store'])->middleware('auth');
 Route::post('/contact', [ContactUsController::class, 'store'])->name('contact.submit');
-Route::get('/faqs', [FaqsController::class, 'faqs']);
+Route::get('/faq', [FaqsController::class, 'index']);
 
 
 
