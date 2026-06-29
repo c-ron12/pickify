@@ -32,7 +32,7 @@
                     <h6 style="margin-bottom: 15px;">NEED HELP</h6>
                     <ul class="list-unstyled">
                         <li><a href="{{ url('/faq') }}">FAQs</a></li>
-                        <li><a href="{{ url('/track-order') }}">Track Your Order</a></li>
+                        <li><a href="{{ url('/myorders') }}">Track Your Order</a></li>
                         <li><a href="{{ url('/returns') }}">Returns & Exchanges</a></li>
                         <li><a href="{{ url('/shipping-info') }}">Shipping Information</a></li>
                         <li><a href="{{ url('/support') }}">Customer Support</a></li>
