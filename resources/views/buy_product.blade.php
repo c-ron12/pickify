@@ -1,6 +1,6 @@
 @extends('layoutTemplate.main')
 @section('main-container')
-<div class="container my-5">
+<div class="container my-5" style="margin-top: 9rem !important;">
     <div class="row justify-content-center mx-auto w-100" style="max-width: 1400px !important;">
         <div class="col-md-8">
             <div class="card shadow-lg p-4">
