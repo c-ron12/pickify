@@ -2,7 +2,7 @@
 @section('main-container')
 
 <div class="container">
-    <h2 class="text-center" style="text-transform: uppercase; font-weight: bold; margin-top: 90px; margin-bottom: 55px">My Cart</h2>
+    <h2 class="text-center pt-5" style="text-transform: uppercase; font-weight: bold; margin-top: 90px; margin-bottom: 55px">My Cart</h2>
     <div class="row">
         @foreach($cart as $item)
         @if ($item->product)
