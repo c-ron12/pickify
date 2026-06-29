@@ -9,6 +9,8 @@ use App\Http\Controllers\WhyusController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FaqsController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\InfoPageController;
 
 // user view
 Route::get('/', [HomeController::class, 'home'])->name('home');
@@ -16,6 +18,10 @@ Route::get('/shop', [ShopController::class, 'shop']);
 Route::get('/why_us', [WhyusController::class, 'why_us']);
 Route::get('/testimonial', [TestimonialController::class, 'testimonial']);
 Route::get('/contact_us', [ContactusController::class, 'contact_us']);
+
+Route::get('/returns', [InfoPageController::class, 'returns']);
+Route::get('/shipping-info', [InfoPageController::class, 'shipping']);
+Route::get('/support', [InfoPageController::class, 'support']);
 
 Route::get('/dashboard', [HomeController::class, 'login_home'])->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -27,13 +33,16 @@ Route::post('place_order/{id}', [HomeController::class, 'place_order'])->middlew
 Route::get('myorders', [HomeController::class, 'myorders'])->middleware(['auth', 'verified'])->name('myorders');
 Route::get('order_details/{id}', [HomeController::class, 'order_details'])->middleware(['auth', 'verified'])->name('order.details');
 Route::post('/order/{id}/cancel', [HomeController::class, 'cancel'])->name('order.cancel')->middleware(['auth', 'verified']);
+// If a guest hits /myorders, the auth middleware instantly kicks them to the login page
+Route::get('/myorders', [OrderController::class, 'index'])->middleware(['auth', 'verified']);
 
 Route::get('search_product', [HomeController::class, 'search_product'])->name('search.product');
 Route::get('remove_from_cart/{id}', [HomeController::class, 'remove_from_cart'])->middleware(['auth', 'verified']);
 Route::post('/submit_testimonial', [TestimonialController::class, 'store'])->middleware('auth');
 Route::post('/contact', [ContactUsController::class, 'store'])->name('contact.submit');
 Route::get('/faq', [FaqsController::class, 'index']);
-
+// If a guest hits /myorders, the auth middleware instantly kicks them to the login page
+Route::get('/myorders', [App\Http\Controllers\OrderController::class, 'index'])->middleware('auth');
 
 
 Route::middleware('auth')->group(function () {
