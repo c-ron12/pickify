@@ -1,5 +1,5 @@
 @include('layoutTemplate.header')
-<div class="container">
+<div class="container mt-5 pt-5">
     <div class="row mx-auto w-100" style="max-width: 1400px !important;">
         <div class="col-md-12" style="background-color: #f5f5f5; margin-top: -24px;">
             <div class="d-flex justify-content-center">
