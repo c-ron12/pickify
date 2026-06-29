@@ -2,7 +2,7 @@
 @section('main-container')
 
 <div class="container">
-    <h2 class="text-center" style="text-transform: uppercase; font-weight: bold; margin-top: 90px; margin-bottom: 55px">
+    <h2 class="text-center pt-5" style="text-transform: uppercase; font-weight: bold; margin-top: 90px; margin-bottom: 55px">
         My Orders</h2>
 
     <!-- Order Tabs -->
