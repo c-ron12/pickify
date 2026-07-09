@@ -21,10 +21,11 @@
                         ABOUT US
                     </h6>
                     <p class="footerPara1">
-                        Your favorite online store for trendy shoes and stylish clothing. We offer premium quality
-                        fashion, unbeatable prices, and a seamless shopping experience—so you can step out in
-                        confidence. Discover the latest trends, enjoy fast delivery, and exclusive deals just for you.
-                        Shop now and elevate your wardrobe with effortless style!
+                        Discover an unmatched shopping experience with Pickify. Whether you are refreshing your wardrobe
+                        with premium apparel,
+                        upgrading your tech setup, or equipping your kitchen with the latest appliances, we have you
+                        covered. High-quality
+                        essentials, unbeatable variety, and fast delivery.
                     </p>
                 </div>
 
