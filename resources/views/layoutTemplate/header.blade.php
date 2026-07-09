@@ -71,6 +71,21 @@
                             Contact Us
                         </a>
                     </li>
+
+                    <form action="{{ route('search.product') }}" method="GET" id="searchBar" class="d-inline-block">
+
+                        <input type="text" name="search" id="searchInput" placeholder="Search your items"
+                            autocomplete="off">
+
+                        <button type="button" id="clearBtn" style="border: none; background: transparent;">
+                            <i class="fa fa-times"></i>
+                        </button>
+
+                        <button type="submit" class="search_button">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </button>
+
+                    </form>
                 </ul>
 
             </div>
@@ -80,7 +95,7 @@
 
                 @auth
 
-                <div class="d-flex flex-column position-relative gap-3" style="bottom: 15.5px; gap: 8px;">
+                <div class="d-flex flex-column position-relative gap-3" style="bottom: 15.5px; gap: 8px; left: 25px;">
                     <a href="{{url('mycart')}}" class="cart" style="padding-right: 3.5rem;">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <span style="margin: 0 5px">
@@ -95,10 +110,10 @@
                 <div class="list-inline-item logout" style="position: relative; top: -7.5px; padding-right: 9px;">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="btn btn-danger"
+                        <button type="submit" class="btn btn-danger btn-small"
                             style="background: #dfd696; color: black;">Logout</button>
                     </form>
-                </div>
+                </div> 
 
                 <div class="hamburger-and-login">
                     <i class=" mobile-nav-toggle fa-solid fa-bars"></i>

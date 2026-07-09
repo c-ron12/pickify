@@ -4,13 +4,13 @@
     }
 
     #searchBar input {
-        width: 220px;
-        font-size: 15px;
+        width: 215px;
+        font-size: 14px;
     }
 
-    .navbar-nav {
-        margin-left: -65px;
-    }
+    /* .navbar-nav {
+        margin-left: -45px;
+    } */
 }
 
 @media (max-width: 1320px) {
@@ -19,16 +19,17 @@
     }
 }
 
+@media (max-width: 1200px) {
+    .details-add-to-cart .btn {
+        padding: 6px 10px !important; 
+        font-size: 13px; 
+    }
+}
+
 @media (max-width: 1260px) {
     .navbar-nav {
         display: none;
         /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
-    }
-
-    /* Hide the search bar by default on small screens */
-    #searchBar {
-        margin-top: 17px;
-        margin-left: -60px;
     }
 
     .navbar-nav.show {
@@ -44,6 +45,13 @@
         margin-top: -15px;
         padding: 17px 0 42px 0;
         background-color: #232323;
+    }
+
+    /* Hide the search bar by default on small screens */
+    #searchBar {
+        margin-top: 17px;
+        left: 50%;
+        transform: translate(-50%);
     }
 
     .hamburger-and-login .fa-bars {
@@ -95,14 +103,12 @@
 }
 
 @media (max-width: 1120px) {
-
     .saving_section .detail-box {
         padding: 0;
     }
 }
 
 @media (max-width: 992px) {
-
     .parent-img-box {
         margin-top: 45px;
         padding-left: 0px;
@@ -138,7 +144,7 @@
     }
 
     .parent-detail-box1 {
-        padding-bottom: 80PX;
+        padding-bottom: 80px;
         position: relative;
     }
 
@@ -156,7 +162,6 @@
     }
 
     .saving_section .detail-box {
-
         margin-bottom: 30px;
     }
 
@@ -183,6 +188,7 @@
     }
 }
 
+
 @media (max-width: 768px) {
     .hero_area {
         padding: 0 25px;
@@ -207,20 +213,17 @@
         margin-bottom: 45px;
     }
 
-    .info_section .row>div {
+    .info_section .row > div {
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
-
     }
 
     .info_section {
         margin: 0 25px 25px;
     }
-
 }
-
 
 @media (max-width: 640px) {
     .logo-link img {
@@ -248,15 +251,12 @@
         padding-right: 25px;
     }
 
-
     .cart {
         padding-right: 25px !important;
     }
-
 }
 
 @media (max-width: 480px) {
-
     .saving_section .detail-box,
     .gift_section .detail-box {
         padding: 0 5px;
@@ -278,12 +278,13 @@
     .detail-img {
         height: 200px;
     }
-
 }
 
-@media (max-width: 420px) {}
+@media (max-width: 420px) {
+}
 
-@media (max-width: 376px) {}
+@media (max-width: 376px) {
+}
 
 @media (min-width: 1200px) {
     .container {
