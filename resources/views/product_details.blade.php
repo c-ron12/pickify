@@ -1,7 +1,7 @@
 @include('layoutTemplate.header')
 <div class="container mt-5 pt-5">
     <div class="row mx-auto w-100" style="max-width: 1400px !important;">
-        <div class="col-md-12" style="background-color: #f5f5f5; margin-top: -24px;">
+        <div class="col-md-12" style="background-color: #f5f5f5; margin-top: 40px; margin-bottom: 48px;">
             <div class="d-flex justify-content-center">
                 <div class="img-box mt-5 mb-2">
                     <img src="/images/database_img/{{$data->image}}" class="detail-img img-fluid"

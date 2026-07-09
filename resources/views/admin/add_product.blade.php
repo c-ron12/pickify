@@ -65,6 +65,11 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="store_name" class="form-label">Store Name</label>
+                            <input type="text" name="store_name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
                             <label for="category" class="form-label">Product Category</label>
                             <select name="product_category" class="form-control" required>
                                 <option value="">Select a category</option>

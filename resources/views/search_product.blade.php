@@ -1,8 +1,8 @@
 @extends('layoutTemplate.main')
 @section('main-container')
 
-<div class="container">
-    <h2 class="text-center" style="text-transform: uppercase; font-weight: bold; margin-top: 90px; margin-bottom: 55px">
+<div class="container pt-5">
+    <h2 class="text-center pt-4" style="text-transform: uppercase; font-weight: bold; margin-top: 98px; margin-bottom: 55px">
         Search Results for "{{ $search }}"
     </h2>
 
@@ -41,8 +41,8 @@
     @endif
 </div>
 
-<div class="container mt-5">
-    <h2 class="text-center" style="text-transform: uppercase; font-weight: bold;">Recommended Products</h2>
+<div class="container">
+    <h2 class="text-center mb-5" style="text-transform: uppercase; font-weight: bold;">Recommended Products</h2>
 </div>
 
 @endsection
