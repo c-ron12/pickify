@@ -1,6 +1,6 @@
 # Pickify E-Commerce Website
 
-Pickify is a full-stack e-commerce web application built with Laravel. The platform showcases dynamic product categories, an intuitive shopping cart workflow, customer testimonials, and a comprehensive backend system for managing inventory, orders, and user interactions securely.
+Pickify is a full-stack e-commerce web application built with Bootstrap, Vanilla JS and Laravel. The platform showcases dynamic product categories, an intuitive shopping cart workflow, customer testimonials, and a comprehensive backend system for managing inventory, orders, and user interactions securely.
 
 ---
 
