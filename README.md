@@ -33,13 +33,13 @@ Pickify is a full-stack e-commerce web application built with Bootstrap, Vanilla
 ---
 ## 📸 Screenshots
 
-| Homepage Hero | Mobile Navigation | Product Grid View |
+| Homepage Hero | Mobile Navigation | Product View |
 | :---: | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/f30075d8-9d69-4764-8e45-3e6caaf478a6" width="100%"> | <img src="https://github.com/user-attachments/assets/9b583c6d-31d2-443a-bbab-6e451e868fe1" width="100%"> | <img src="https://github.com/user-attachments/assets/9fba38b4-82c7-4396-8062-09a41f464863" width="100%"> |
+| <img src="https://github.com/user-attachments/assets/7ec76419-e4f9-4752-a1f4-861bbe5f8019" width="100%"> | <img src="https://github.com/user-attachments/assets/91b1c39c-c63d-4fff-b6e9-187ecf2c9657" width="100%"> | <img src="https://github.com/user-attachments/assets/f0b8e273-7cb2-45db-959e-8893a8030f92" width="100%"> |
 
 | Cart Drawer | Admin Dashboard |
 | :---: | :---: |
-| <img src="https://github.com/user-attachments/assets/f4fa47c1-5ecc-4cf7-9946-f70c3c63055e" width="100%"> | <img src="https://github.com/user-attachments/assets/454773fd-b61f-40e7-bd43-6e7839e028f5" width="100%"> |
+| <img src="https://github.com/user-attachments/assets/98b494c1-0d78-49f4-b672-2e080caf4ec1" width="100%"> | <img src="https://github.com/user-attachments/assets/8ff34021-2798-44ab-a7b7-9d5ef0f52c3e" width="100%"> |
 
 
 ## 🔑 Admin Panel Access
