@@ -84,9 +84,15 @@ body {
     align-items: center;
 }
 
+.hamburger-and-login {
+    position: relative;
+    z-index: 1000; /* Must be higher than navbar-nav's z-index of 999 */
+}
+
 .hamburger-and-login .fa-bars {
     display: none;
 }
+
 
 #navbarSupportedContent.innerpage_navbar {
     background-color: white;

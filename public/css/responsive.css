@@ -21,8 +21,8 @@
 
 @media (max-width: 1200px) {
     .details-add-to-cart .btn {
-        padding: 6px 10px !important; 
-        font-size: 13px; 
+        padding: 6px 10px !important;
+        font-size: 13px;
     }
 }
 
@@ -45,6 +45,12 @@
         margin-top: -15px;
         padding: 17px 0 42px 0;
         background-color: #232323;
+    }
+
+    /* Prevent logout DOM movement from breaking pointer events */
+    #logoutPlaceholder {
+        position: relative;
+        z-index: 1000;
     }
 
     /* Hide the search bar by default on small screens */
@@ -74,6 +80,7 @@
         float: right;
         position: relative;
         top: -50px;
+        z-index: 1001; /* Keep header items clickable */
     }
 
     #navbarSupportedContent {
@@ -188,8 +195,17 @@
     }
 }
 
-
 @media (max-width: 768px) {
+    #logoutPlaceholder {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #logoutPlaceholder .logout {
+        position: static !important;
+        padding: 0;
+    }
+
     .hero_area {
         padding: 0 25px;
     }
