@@ -40,7 +40,7 @@
             <div class="" id="navbarSupportedContent">
 
                 <a class="logo-link " href="{{url('/')}}">
-                    <img src="{{asset('/images/pickify_logo.png')}}" alt="" height="67px">
+                    <img src="{{asset('/images/pickify_logo.png')}}" alt="Pickify Logo" height="67px">
                 </a>
 
                 <ul class="navbar-nav">
@@ -86,6 +86,11 @@
                         </button>
 
                     </form>
+                    1
+                    <li>
+                        <div id="logoutPlaceholder"></div>
+                    </li>
+
                 </ul>
 
             </div>
@@ -95,7 +100,7 @@
 
                 @auth
 
-                <div class="d-flex flex-column position-relative gap-3" style="bottom: 15.5px; gap: 8px; left: 25px;">
+                <div class="d-flex flex-column position-relative gap-3" style="bottom: 15.5px; gap: 8px;">
                     <a href="{{url('mycart')}}" class="cart" style="padding-right: 3.5rem;">
                         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                         <span style="margin: 0 5px">
@@ -107,13 +112,14 @@
 
                     <a href="{{url('myorders')}}">My Orders</a>
                 </div>
-                <div class="list-inline-item logout" style="position: relative; top: -7.5px; padding-right: 9px;">
+                <div class="list-inline-item logout" id="logoutMenu"
+                    style="position: relative; top: -7.5px; padding-right: 9px;">
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="btn btn-danger btn-small"
+                        <button type="submit" class="btn btn-small"
                             style="background: #dfd696; color: black;">Logout</button>
                     </form>
-                </div> 
+                </div>
 
                 <div class="hamburger-and-login">
                     <i class=" mobile-nav-toggle fa-solid fa-bars"></i>
@@ -145,31 +151,51 @@
     </header>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-        const toggleButton = document.querySelector('.mobile-nav-toggle');
+        document.addEventListener("DOMContentLoaded", function () {
+        // Event delegation for the Hamburger Menu
+        document.addEventListener('click', function (e) {
+        const toggleButton = e.target.closest('.mobile-nav-toggle');
         const navMenu = document.querySelector('.navbar-nav');
-        const searchBar = document.querySelector('#searchBar');
-
-        toggleButton.addEventListener('click', () => {
+        
+        if (toggleButton && navMenu) {
+        e.stopPropagation();
         navMenu.classList.toggle('show');
-         });
+        }
         });
-    </script>
-
-    <script>
+        
+        // Search Clear Button Logic
         const searchInput = document.getElementById('searchInput');
         const clearBtn = document.getElementById('clearBtn');
-
-         function toggleClearButton() {
+        
+        if (searchInput && clearBtn) {
+        function toggleClearButton() {
         clearBtn.style.display = searchInput.value ? 'inline-block' : 'none';
         }
-
+        
         searchInput.addEventListener('input', toggleClearButton);
-        window.addEventListener('DOMContentLoaded', toggleClearButton);
-
+        
         clearBtn.addEventListener('click', function () {
         searchInput.value = '';
         toggleClearButton();
         searchInput.focus();
-    });
+        });
+        
+        toggleClearButton();
+        }
+        
+        // Dynamic Logout Button Relocation
+        const logout = document.getElementById("logoutMenu");
+        const placeholder = document.getElementById("logoutPlaceholder");
+        const hamburger = document.querySelector(".hamburger-and-login");
+        
+        if (logout && placeholder && hamburger) {
+        function moveLogout() {
+        if (window.innerWidth <= 768) { if (!placeholder.contains(logout)) { placeholder.appendChild(logout); } } else { if
+            (hamburger.previousElementSibling !==logout) { hamburger.before(logout); } } } moveLogout();
+            window.addEventListener("resize", moveLogout); } });
     </script>
+
+
+</body>
+
+</html>

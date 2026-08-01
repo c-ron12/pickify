@@ -23,8 +23,8 @@
     <div class="min-h-screen flex flex-col items-center pt-6 pb-6 bg-gray-100 dark:bg-gray-900" style="padding: 5rem 0 !important;">
         <div>
             <a href="/">
-                <img src="{{ asset('images/pickify_logo.png') }}" alt=""
-                    class="w-24 h-24 mb-10 filter hue-rotate-30 brightness-75">
+                
+                <img src="{{ asset('images/pickify_logo.png') }}" style="width: 90px !important; height: auto !important;" class="mb-10 filter hue-rotate-30 brightness-75" alt="Pickify Logo">
             </a>
         </div>
 
